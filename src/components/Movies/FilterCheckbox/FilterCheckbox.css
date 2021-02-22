@@ -1,0 +1,51 @@
+.filter-checkbox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+}
+
+.filter-checkbox__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+  width: 100%;
+  max-width: 2560px;
+  padding: 29px auto 48px auto;
+  margin: 0 auto;
+}
+
+.filter-checkbox_invisible {
+  position: absolute;
+  width: 1px; /* если у элемента не будет размеров, некоторые браузеры посчитают, что его вообще нет */
+  height: 1px;
+  overflow: hidden; /* без этого свойства тоже сработает, но так наверняка. Мы его ещё изучим, оно скрывает элементы, выходящие за границы родителя */
+  clip: rect(0 0 0 0);
+}
+
+.filter-checkbox_invisible + .filter-checkbox_visible {
+  width: 50px;
+  height: 28px;
+  background-image: url('../../../images/checkbox-disabled.svg');
+}
+
+.filter-checkbox_invisible:checked + .filter-checkbox_visible {
+  width: 50px;
+  height: 28px;
+  background-image: url('../../../images/checkbox-checked.svg');
+}
+
+.filter-checkbox_invisible + .filter-checkbox_visible:hover {
+  cursor: pointer;
+}
+
+.filter-checkbox_text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  margin-left: 12px;
+}

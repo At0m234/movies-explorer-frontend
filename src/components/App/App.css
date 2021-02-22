@@ -1,0 +1,39 @@
+.app {
+  height: auto;
+  font-family: 'Inter', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  z-index: -10;
+}
+
+@media screen and (min-width : 1024px) and (max-width : 1279px) {
+  .app {
+      min-width: 1024px;
+      max-width: 1279px;
+  }
+}
+
+@media screen and (min-width : 768px) and (max-width : 1023px) {
+  .app {
+      min-width: 768px;
+      max-width : 1023px;
+  }
+}
+
+@media screen and (min-width : 375px) and (max-width : 767px) {
+  .app {
+      min-width: 375px;
+      max-width: 767px;
+  }
+}
+
+@media screen and (max-width : 374px) {
+  .app {
+      max-width: 374px;
+      min-width: 320px;
+  }
+}

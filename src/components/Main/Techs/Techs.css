@@ -1,0 +1,134 @@
+.techs {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 100px 70px;
+  background-color: #272727;
+  justify-content: center;
+  align-items: center;
+  max-width: 2560px;
+}
+
+.techs__title {
+  display: flex;
+  align-self: flex-start;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  color: #fff;
+  margin: 0 0 90px 0;
+  border-bottom: 1px solid #949494;
+  padding-bottom: 23px;
+  width: 100%;
+}
+
+.techs__subtitle {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  margin: 0 auto 26px auto;
+  color: #fff;
+}
+
+.techs__text {
+  text-align: center;
+  max-width: 450px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+}
+
+.techs__container {
+  display: flex;
+  flex-direction: row;
+  margin: 100px auto 0 auto;
+  max-width: 690px;
+}
+
+.techs__skill {
+  display: flex;
+  width: 90px;
+  height: 60px;
+  background-color: #303030;
+  border-radius: 10px;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+@media screen and (max-width : 1279px) {
+  .techs {
+    padding: 90px 50px;
+  }
+
+  .techs__title {
+    margin: 0 0 80px 0;
+  }
+
+  .techs__subtitle {
+    margin: 0 auto 22px auto;
+  }
+
+  .techs__text {
+    max-width: 550px;
+  }
+
+  .techs__container {
+    margin-top: 83px;
+    max-width: 648px;
+  }
+
+  .techs__skill {
+    width: 84px;
+    height: 57px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width : 767px) {
+  .techs {
+    padding: 70px 18px;
+  }
+
+  .techs__title {
+    padding-bottom: 28px;
+    font-size: 18px;
+    border-bottom: 1px solid #000;
+    margin: 0 0 60px 0;
+  }
+
+  .techs__subtitle {
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto 24px auto;
+  }
+
+  .techs__text {
+    max-width: 292px;
+    text-align: center;
+    font-size: 11px;
+  }
+
+  .techs__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    max-width: 170px;
+    max-height: 258px;
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,59 @@
+.navigation {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0 0 82px;
+  min-width: 212px;
+}
+
+.navigation__movies {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.navigation__saved-movies {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  min-width: 153px;
+}
+
+.navigation__movies:hover {
+  cursor: pointer;
+  transition: .1s linear .05s;
+  opacity: .5;
+}
+
+.navigation__saved-movies:hover {
+  cursor: pointer;
+  transition: .1s linear .05s;
+  opacity: .5;
+}
+
+.navigation__movies:active, .navigation__movies:focus {
+  outline: none;
+  font-weight: 700;
+}
+
+.navigation__saved-movies:active, .navigation__saved-movies:focus {
+  outline: none;
+  font-weight: 700;
+}
+
+@media screen and (max-width : 1279px) {
+  .navigation {
+    display: none;
+  }
+}
