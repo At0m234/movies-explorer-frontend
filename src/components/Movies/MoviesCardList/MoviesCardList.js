@@ -6,7 +6,7 @@ import MoviesCard from '../MoviesCard/MoviesCard';
 // компонент, который управляет отрисовкой карточек фильмов на страницу и их количеством
 function MoviesCardList () {
   return (
-    <section className='movies-card-list'>
+    <div className='movies-card-list'>
       <MoviesCard/>
       <MoviesCard/>
       <MoviesCard/>
@@ -23,7 +23,7 @@ function MoviesCardList () {
       <MoviesCard/>
       <MoviesCard/>
       <MoviesCard/>
-    </section>
+    </div>
   )
 }
 

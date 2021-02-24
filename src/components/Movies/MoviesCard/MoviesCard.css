@@ -45,6 +45,15 @@
   background-repeat: no-repeat;
 }
 
+.movies-card__container_like {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  background-image: url('../../../images/LikeIconDisabled.svg');
+  background-repeat: no-repeat;
+}
+
 .movies-card__container_remove:hover {
   cursor: pointer;
   transition: .1s linear .05s;

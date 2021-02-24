@@ -31,6 +31,7 @@
   height: 46px;
   border: none;
   color: #fff;
+  padding-left: 15px;
 }
 
 .register__form_input::placeholder {
@@ -44,7 +45,6 @@
 .register__form_input:focus {
   color: #fff;
   caret-color: #fff;
-  lighting-color: #fff;
 }
 
 .register__form_submit {

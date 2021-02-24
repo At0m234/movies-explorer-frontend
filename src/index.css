@@ -1,2 +1,14 @@
+
 @import url('./vendor/normalize.css');
-@import url('./vendor/fonts/Inter-3.12/Inter (Web)/inter.css');
+@import url('./vendor/fonts/fonts.css');
+
+.index {
+  height: auto;
+  font-family: 'Inter', 'Roboto', 'Roboto Slab', 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}

@@ -34,6 +34,7 @@
   height: 46px;
   border: none;
   color: #fff;
+  padding-left: 15px;
 }
 
 .login__form_input::placeholder {
@@ -47,7 +48,6 @@
 .login__form_input:focus {
   color: #fff;
   caret-color: #fff;
-  lighting-color: #fff;
 }
 
 .login__form_submit {

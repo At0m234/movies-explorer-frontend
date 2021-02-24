@@ -57,8 +57,7 @@
 
 .profile__info_line {
   width: 410px;
-  size: 1px;
-  color: #424242;
+  border-bottom: 1px solid #424242;
 }
 
 .profile__edit-btn {
@@ -81,13 +80,6 @@
 }
 
 .profile__signout-btn {
-  background-color: transparent;
-  border: none;
-  text-decoration: none;
-  margin: 16px auto 70px auto;
-}
-
-.profile__signout-btn_redirect {
   font-family: Inter;
   font-style: normal;
   font-weight: 300;
@@ -98,9 +90,11 @@
   background-color: transparent;
   border: none;
   text-decoration: none;
+  margin: 16px auto 70px auto;
 }
 
-.profile__signout-btn_redirect:hover {
+
+.profile__signout-btn:hover {
   cursor: pointer;
   transition: .1s linear .05s;
   opacity: .5;
@@ -137,8 +131,7 @@
 
   .profile__info_line {
     width: 260px;
-    size: 1px;
-    color: #424242;
+    border-bottom: 1px solid #424242;
   }
 
   .profile__edit-btn {

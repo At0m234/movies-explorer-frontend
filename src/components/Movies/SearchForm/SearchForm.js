@@ -8,15 +8,15 @@ import searchIcon from '../../../images/search-icon.svg';
 // форма поиска, куда пользователь будет вводить запрос
 function SearchForm () {
   return (
-    <section className='searchForm'>
+    <div className='searchForm'>
       <div className='searchForm__container'>
         <img className='searchForm__container_image' src={searchIcon} alt='Лупа'></img>
-        <input className='searchForm__container_input' placeholder='Фильм'></input>
+        <input className='searchForm__container_input' placeholder='Фильм' required pattern="[A-Za-zА-Яа-яЁё0-9 -]{1,40}"></input>
         <button className='searchForm__container_btn'></button>
       </div>
-      <hr className='searchForm__container_underline' noshade='true'></hr>
+      <hr className='searchForm__container_underline'></hr>
       <FilterCheckbox/>
-      </section>
+      </div>
   )
 }
 
