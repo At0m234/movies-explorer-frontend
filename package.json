@@ -19,7 +19,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "bands":"npm run build && npm run start",
+    "deploy": "npm run build && scp -r build/* atom@84.252.130.94:/home/atom/movies-explorer-frontend"
   },
   "eslintConfig": {
     "extends": [

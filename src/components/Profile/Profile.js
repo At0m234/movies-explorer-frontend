@@ -1,40 +1,45 @@
-import React, { useState } from 'react';
-import { NavLink, useHistory } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import './Profile.css';
 
 // компонент страницы изменения профиля
-function Profile () {
-  const history = useHistory();
-  const profileName = localStorage.getItem('name');
-  const profileEmail = localStorage.getItem('email');
+function Profile (props) {
 
-  const [userName, setUserName] = useState(profileName);
-  const [userEmail, setUserEmail] = useState(profileEmail);
-
-  function patchUser() {
-
-  }
-
-  function handleSignOut() {
-    localStorage.clear()
-    history.push('/')
-  }
+  useEffect(() => {
+    props.setEditFormValid(true)
+  }, [props.emailError, props.nameError])
 
   return (
     <section className='profile'>
-      <h1 className='profile__greeting-title'>{'Привет, ' + profileName + '!'}</h1>
-      <div className='profile__info'>
-        <p className='profile__info_text'>Имя</p>
-        <p className='profile__info_user'>{profileName}</p>
-      </div>
+      <h1 className='profile__greeting-title'>{'Привет, ' + props.currentUser.name + '!'}</h1>
+
+        <form className='profile__info'>
+          <p className='profile__info_text'>Имя</p>
+          {
+            (props.isEditing)
+            ? <input className='profile__info_user' onChange={(e) => {props.nameHandler(e)}} onBlur={e => props.blurHandler(e)} name='name'/>
+            : <p className='profile__info_user'>{props.currentUser.name}</p>
+          }
+          <div></div>
+          {(props.nameInvalid && props.nameError) && <div className='profile__info_user-error'>{props.nameError}</div>}
+        </form>
+
         <hr className='profile__info_line'></hr>
-      <div className='profile__info'>
-        <p className='profile__info_text'>Почта</p>
-        <p className='profile__info_user'>{profileEmail}</p>
-      </div>
-        <button className='profile__edit-btn' onClick={patchUser}>Редактировать</button>
-        <NavLink to='/' className='profile__signout-btn' onClick={handleSignOut}>Выйти из аккаунта</NavLink>
+
+        <form className='profile__info'>
+          <p className='profile__info_text'>Почта</p>
+          {
+            (props.isEditing)
+            ? <input className='profile__info_user' onChange={(e) => props.emailHandler(e)} onBlur={e => props.blurHandler(e)} name='email'/>
+            : <p className='profile__info_user'>{props.currentUser.email}</p>
+          }
+          <div></div>
+          {(props.emailInvalid && props.emailError) && <div className='profile__info_user-error'>{props.emailError}</div>}
+        </form>
+
+        <button className='profile__edit-btn' onClick={props.handleEditProfileBtn} disabled={!props.editFormValid}>Редактировать</button>
+        <NavLink to='/' className='profile__signout-btn' onClick={props.onSignOut}>Выйти из аккаунта</NavLink>
     </section>
   )
 }

@@ -6,6 +6,7 @@
   height: 40px;
   margin: 0 -40px 0 0;
   background-color: #202020;
+  z-index: 5;
 }
 
 .gamburger-menu__container {

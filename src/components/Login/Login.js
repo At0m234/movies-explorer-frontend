@@ -1,38 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 
 // компонент страницы авторизации
 function Login (props) {
 
-  const [email, setEmail] = useState('');
-  const [password,setPassword] = useState('');
-
-  // функция обработки изменений в поле "email"
-  function handleEmailChange(e) {
-    setEmail(e.target.value)
-  }
-
-  // функция обработки изменений в поле "пароль"
-  function handlePasswordChange(e) {
-    setPassword(e.target.value)
-  }
-
-  // функция обработки кнопки сабмита формы логина
-  function handleLoginSubmit(e) {
-    e.preventDefault();
-    props.onLogin(email, password);
-  }
+  useEffect(() => {
+    if(props.emailError || props.passwordError) {
+      props.setFormValid(false)
+    } else {
+      props.setFormValid(true)
+    }
+  }, [props.emailError, props.passwordError])
 
   return (
     <section className='login'>
-      <form className='login__form' method="POST" onSubmit={handleLoginSubmit}>
+      <form className='login__form' method="POST" onSubmit={props.handlerLoginSubmit}>
+
         <label className='login__form_label' htmlFor='email'>E-mail</label>
-        <input className='login__form_input' id='email' onChange={handleEmailChange} type='email' placeholder='Введите почту' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></input>
+        <input className='login__form_input' onChange={(e)=> props.emailHandler(e)} onBlur={(e)=> props.blurHandler(e)} id='email' name='email' value={props.email} type='email' placeholder='Введите почту'></input>
+        {(props.emailInvalid && props.emailError) && <div className='login__form_input-error'>{props.emailError}</div>}
+
         <label className='login__form_label' htmlFor='password'>Пароль</label>
-        <input className='login__form_input' id='password' onChange={handlePasswordChange} type='password' placeholder='Введите пароль' required></input>
-        <button className='login__form_submit' type='submit'>Войти</button>
+        <input className='login__form_input' onChange={(e)=> props.passwordHandler(e)} onBlur={(e)=> props.blurHandler(e)} id='password' name='password' value={props.password} type='password' placeholder='Введите пароль'></input>
+        {(props.passwordInvalid && props.passwordError) && <div className='login__form_input-error'>{props.passwordError}</div>}
+
+        <button className='login__form_submit' type='submit' disabled={!props.formValid}>Войти</button>
         <h2 className='login__form_text'>Еще не зарегистрированы?<Link to="/signup" className="login__form_register">Регистрация</Link></h2>
+
       </form>
     </section>
   )

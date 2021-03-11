@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect , useState} from 'react';
 import { Switch, Route, Link, NavLink } from 'react-router-dom';
 import { Dimensions } from 'react-native';
 import './Header.css'
@@ -9,8 +9,9 @@ import Navigation from '../Navigation/Navigation';
 import GamburgerMenu from '../GamburgerMenu/GamburgerMenu';
 
 // компонент, который отрисовывает шапку сайта на страницу
-function Header () {
-  const windowWidth = Dimensions.get('window').width;
+function Header(props) {
+  useEffect(() => {
+  },[props.windowWidth])
 
   return (
     <header className='header'>
@@ -45,7 +46,7 @@ function Header () {
             <Link to='/'><img className='header__logo' src={logo} alt='Логотип'></img></Link>
             <Navigation/>
             {
-              (windowWidth === 1279 || windowWidth < 1279)
+              (props.windowWidth === 1279 || props.windowWidth < 1279)
               ? <GamburgerMenu/>
               : <NavLink to='/profile'className='gamburger-menu__link_btn'></NavLink>
             }
@@ -57,7 +58,7 @@ function Header () {
             <Link to='/'><img className='header__logo' src={logo} alt='Логотип'></img></Link>
             <Navigation/>
             {
-              (windowWidth === 1279 || windowWidth < 1279)
+              (props.windowWidth === 1279 || props.windowWidth < 1279)
               ? <GamburgerMenu/>
               : <NavLink to='/profile'className='gamburger-menu__link_btn'></NavLink>
             }
@@ -69,7 +70,7 @@ function Header () {
             <Link to='/'><img className='header__logo' src={logo} alt='Логотип'></img></Link>
             <Navigation/>
             {
-              (windowWidth === 1279 || windowWidth < 1279)
+              (props.windowWidth === 1279 || props.windowWidth < 1279)
               ? <GamburgerMenu/>
               : <NavLink to='/profile'className='gamburger-menu__link_btn'></NavLink>
             }

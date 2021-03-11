@@ -45,6 +45,7 @@
   display: grid;
   align-items: center;
   justify-items: end;
+  text-align: end;
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
@@ -53,6 +54,22 @@
   color: #fff;
   margin: 0;
   width: 205px;
+  border: none;
+  background-color: transparent;
+}
+
+.profile__info_user-error {
+  display: flex;
+  justify-content: flex-end;
+  align-self: start;
+  align-items: center;
+  width: 100%;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  color: rgb(170, 8, 8);
+  margin: 0;
 }
 
 .profile__info_line {
@@ -77,6 +94,11 @@
   cursor: pointer;
   transition: .1s linear .05s;
   opacity: .5;
+}
+
+.profile__edit-btn:disabled {
+  cursor: not-allowed;
+  opacity: 1;
 }
 
 .profile__signout-btn {

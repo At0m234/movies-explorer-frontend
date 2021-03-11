@@ -1,29 +1,56 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, {useState} from 'react';
 import './MoviesCard.css';
 
-import poster from '../../../images/Gladiator.jpg'
-
 // компонент одной карточки фильма
-function MoviesCard () {
+function MoviesCard (props) {
+  const [liked, setLiked] = useState(false);
+
+  function movieDuration(min) {
+    const hours = (min/60);
+    const hoursRemnant = ((min % 60) / 60);
+    const minutes = (min % 60);
+    const movieTime = Math.ceil(hours - hoursRemnant) + ' ч ' + minutes + ' м';
+    return movieTime;
+  }
+
+  function dislike() {
+    props.setSavedMovies(props.savedMovies.map((elem, ind) => {
+      if (props.card.id !== elem.id) {
+        return elem;
+      } else {
+        return null;
+      }
+    }))
+    setLiked(false)
+  }
+
+  function like() {
+    props.setSavedMovies(props.savedMovies.map((elem, ind) => {
+      if (props.card.id === elem.id) {
+        return elem;
+      } else {
+        return null;
+      }
+    }))
+    setLiked(true)
+  }
+
   return (
     <div className='movies-card'>
-      <img className='movies-card__image' src={poster} alt='Постер фильма'></img>
+      <a href={props.card.trailerLink} target='/blank'><img className='movies-card__image' src={props.card.image.url ? props.card.image.url : ""} alt={props.card.nameEN}></img></a>
       <div className='movies-card__container'>
-        <h2 className='movies-card__container_title'>Гладиатор</h2>
-        <Switch>
-
-          <Route path='/saved-movies'>
-            <button className='movies-card__container_remove'></button>
-          </Route>
-
-          <Route path='/movies'>
-            <button className='movies-card__container_like'></button>
-          </Route>
-
-        </Switch>
+        <h2 className='movies-card__container_title'>{props.card.nameRU}</h2>
+        {
+          (
+          (liked === true)
+          ? <button className='movies-card__container_btn movies-card__container_btn-liked' onClick={() => props.dislikeMovie(props.card, dislike)}></button>
+          : liked === false
+              ? <button className='movies-card__container_btn movies-card__container_btn-like' onClick={() => props.likeMovie(props.card, like)}></button>
+              : ""
+          )
+        }
       </div>
-      <p className='movies-card__duration'>1ч 42м</p>
+      <p className='movies-card__duration'>{movieDuration(props.card.duration)}</p>
     </div>
   )
 }

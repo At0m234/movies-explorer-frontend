@@ -9,3 +9,40 @@
   margin: 0 auto;
 }
 
+.movies__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 80px auto;
+}
+
+.movies__add-mov-btn {
+  width: 320px;
+  height: 36px;
+  background-color: transparent;
+  border: 1px solid #424242;
+  border-radius: 5px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  justify-self: flex-end;
+}
+
+.movies__add-mov-btn:hover {
+  cursor: pointer;
+  opacity: .5;
+  transition: .1s linear .05s;
+}
+
+@media screen and (max-width : 767px) {
+  .movies__add-mov-btn {
+    width: 240px;
+  }
+}
