@@ -26,10 +26,12 @@ function Movies (props) {
         />
         <MoviesCardList
           cards={props.cards}
-          savedMovies={props.savedMovies}
-          setSavedMovies={props.setSavedMovies}
+          allMovies={props.allMovies}
+          setAllMovies={props.setAllMovies}
           errorFound={props.errorFound}
           cardsVisible={props.cardsVisible}
+          savedMovies={props.savedMovies}
+          setSavedMovies={props.setSavedMovies}
           liked={props.liked}
           setLiked={props.setLiked}
           likeMovie={props.likeMovie}
@@ -44,9 +46,9 @@ function Movies (props) {
                   props.setCardsVisible (
                     props.windowWidth > 1281
                     ? props.cardsVisible + 4
-                    :  props.windowWidth > 769 && props.windowWidth < 1280
+                    :  props.windowWidth > 1024 && props.windowWidth < 1280
                       ? props.cardsVisible + 3
-                      : props.windowWidth > 481 && props.windowWidth < 768
+                      : props.windowWidth > 481 && props.windowWidth < 1024
                       ? props.cardsVisible + 2
                       : props.windowWidth > 50 && props.windowWidth < 480
                       ? props.cardsVisible + 2
@@ -61,11 +63,5 @@ function Movies (props) {
 
   )
 }
-
-// (props.cardsVisible < props.cards.length)
-// ? <div className='movies__container'>
-//     <button className='movies__add-mov-btn'onClick={()=>{props.setCardsVisible(props.cardsVisible + 4)}}>Ещё</button>
-//   </div>
-// : ""
 
 export default Movies;

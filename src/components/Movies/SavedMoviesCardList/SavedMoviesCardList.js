@@ -21,12 +21,14 @@ function SavedMoviesCardList (props) {
               liked={props.liked}
               likedMovie={props.likedMovie}
               savedMovies={props.savedMovies}
+              allMovies={props.allMovies}
+              setAllMovies={props.setAllMovies}
               setSavedMovies={props.setSavedMovies}
               likeMovie={props.likeMovie}
               dislikeMovie={props.dislikeMovie}
             />
           })
-          : "У Вас нет сохраненных фильмов"
+          : <div className='saved-movies-card-list__message'>У Вас нет сохраненных фильмов</div>
       }
     </div>
   )

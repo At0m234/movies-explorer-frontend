@@ -4,7 +4,9 @@
   align-items: center;
   justify-content: center;
   max-width: 2560px;
+  width: 100%;
   background-color: #202020;
+  margin: 0 auto;
 }
 
 .searchForm__container {
@@ -99,7 +101,18 @@
   border-bottom: 1px solid #424242;
 }
 
+@media screen and (max-width : 1279px) {
+  .searchForm {
+    width: 86%;
+  }
+
+}
+
 @media screen and (max-width : 767px) {
+  .searchForm {
+    width: 86%;
+  }
+
   .searchForm__container_image {
     display: none;
   }

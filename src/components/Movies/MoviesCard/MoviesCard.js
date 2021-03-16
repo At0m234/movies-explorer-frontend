@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './MoviesCard.css';
 
 // компонент одной карточки фильма
 function MoviesCard (props) {
-  const [liked, setLiked] = useState(false);
 
   function movieDuration(min) {
     const hours = (min/60);
@@ -14,25 +13,36 @@ function MoviesCard (props) {
   }
 
   function dislike() {
-    props.setSavedMovies(props.savedMovies.map((elem, ind) => {
-      if (props.card.id !== elem.id) {
+    props.setAllMovies(props.allMovies.map((elem, ind) => {
+      if (props.card.id === elem.id) {
+        elem.liked = false;
         return elem;
       } else {
-        return null;
+        return elem;
       }
     }))
-    setLiked(false)
+    localStorage.setItem("allMovies", JSON.stringify(props.allMovies))
   }
 
   function like() {
-    props.setSavedMovies(props.savedMovies.map((elem, ind) => {
+    props.setAllMovies(props.allMovies.map((elem, ind) => {
       if (props.card.id === elem.id) {
+        elem.liked = true;
         return elem;
       } else {
-        return null;
+        return elem;
       }
     }))
-    setLiked(true)
+
+    props.setSavedMovies(props.savedMovies.map((elem, ind) => {
+      if (props.card.id === elem.id) {
+        elem.liked = true;
+        return elem;
+      } else {
+        return elem;
+      }
+    }))
+    localStorage.setItem("savedMovies", JSON.stringify(props.savedMovies))
   }
 
   return (
@@ -42,11 +52,10 @@ function MoviesCard (props) {
         <h2 className='movies-card__container_title'>{props.card.nameRU}</h2>
         {
           (
-          (liked === true)
+          (props.card.liked && props.card.liked === true)
           ? <button className='movies-card__container_btn movies-card__container_btn-liked' onClick={() => props.dislikeMovie(props.card, dislike)}></button>
-          : liked === false
-              ? <button className='movies-card__container_btn movies-card__container_btn-like' onClick={() => props.likeMovie(props.card, like)}></button>
-              : ""
+          : <button className='movies-card__container_btn movies-card__container_btn-like' onClick={() => props.likeMovie(props.card, like)}></button>
+
           )
         }
       </div>

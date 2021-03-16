@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './SavedMoviesCard.css';
 
 // компонент одной карточки фильма
 function SavedMoviesCard (props) {
-  const [liked, setLiked] = useState(false);
 
   function movieDuration(min) {
     const hours = (min/60);
@@ -21,7 +20,15 @@ function SavedMoviesCard (props) {
         return false;
       }
     }))
-    setLiked(false)
+    localStorage.setItem("savedMovies", JSON.stringify(props.savedMovies));
+    props.setAllMovies(props.allMovies.map((elem, ind) => {
+      if (props.card.id === elem.id) {
+        elem.liked = false;
+        return elem;
+      } else {
+        return elem;
+      }
+    }))
   }
 
   return (

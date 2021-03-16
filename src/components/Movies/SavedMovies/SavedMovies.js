@@ -25,6 +25,10 @@ function SavedMovies (props) {
         cards={props.cards}
         savedMovies={props.savedMovies}
         setSavedMovies={props.setSavedMovies}
+        cardsVisible={props.cardsVisible}
+        setCardsVisible={props.setCardsVisible}
+        allMovies={props.allMovies}
+        setAllMovies={props.setAllMovies}
 
         liked={props.liked}
         setLiked={props.setLiked}

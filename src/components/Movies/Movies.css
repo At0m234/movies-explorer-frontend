@@ -1,6 +1,5 @@
 .movies {
   display: grid;
-  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 2560px;

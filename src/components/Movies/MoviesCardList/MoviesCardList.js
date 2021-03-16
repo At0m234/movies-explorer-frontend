@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './MoviesCardList.css';
 
 import MoviesCard from '../MoviesCard/MoviesCard';
@@ -18,14 +18,15 @@ function MoviesCardList (props) {
                   return <MoviesCard
                     key={card.id}
                     card={card}
-                    savedMovies={props.savedMovies}
-                    setSavedMovies={props.setSavedMovies}
+                    allMovies={props.allMovies}
+                    setAllMovies={props.setAllMovies}
                     trailerLink={card.trailerLink}
                     src={card.image.url}
                     nameRU={card.nameRU}
                     nameEN={card.nameEN}
                     duration={card.duration}
-
+                    savedMovies={props.savedMovies}
+                    setSavedMovies={props.setSavedMovies}
                     liked={props.liked}
                     setLiked={props.setLiked}
                     likeMovie={props.likeMovie}

@@ -7,7 +7,7 @@ const ProtectedRoute = ({...props}) => {
   return (
     <Route>
       {
-        () => props.Agreed
+        () => props.isLogged
         ? props.components.map((elem, index)=>{
             let props = {};
             for (var key in properties[index]) {

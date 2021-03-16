@@ -15,6 +15,21 @@
   padding: 0 70px 140px 70px;
 }
 
+.saved-movies-card-list__message {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 35px;
+  color: rgb(180, 14, 14);
+  text-align: center;
+  width: 65%;
+}
+
 @media screen and (max-width : 1279px) {
   .saved-movies-card-list {
     grid-template-columns: repeat(3, 1fr);
