@@ -1,0 +1,38 @@
+.navigation {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0 0 82px;
+  min-width: 212px;
+}
+
+.navigation__link {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+
+.navigation__link:hover {
+  cursor: pointer;
+  transition: .1s linear .05s;
+  opacity: .5;
+}
+
+.navigation__link:active, .navigation__link:focus {
+  outline: none;
+  font-weight: 700;
+}
+
+
+@media screen and (max-width : 1279px) {
+  .navigation {
+    display: none;
+  }
+}

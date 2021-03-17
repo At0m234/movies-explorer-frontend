@@ -1,0 +1,216 @@
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: #202020;
+  padding: 110px 70px 100px 70px;
+}
+
+.aboutMe__title {
+  display: flex;
+  align-self: flex-start;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  color: #fff;
+  margin: 0 0 70px 0;
+  border-bottom: 1px solid #949494;
+  width: 1140px;
+  padding-bottom: 23px;
+  width: 100%;
+}
+
+.aboutMe__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.aboutMe__info {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.aboutMe__name {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  color: #fff;
+  max-width: 600px;
+  margin: 0 0 18px 0;
+}
+
+.aboutMe__profession {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 26px 0;
+  max-width: 600px;
+}
+
+.abourMe__text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  max-width: 600px;
+  margin: 0 0 55px 0;
+}
+
+.aboutMe__link {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  margin: 55px 20px 0 auto;
+  text-decoration: none;
+}
+
+.aboutMe__link:hover {
+  cursor: pointer;
+  opacity: .25;
+  transition: .1s linear .05s;
+}
+
+.aboutMe__photo {
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width : 1279px) {
+  .aboutMe {
+    padding: 90px 50px 90px 50px;
+  }
+
+  .aboutMe__title {
+    font-size: 22px;
+    margin: 0 0 66px 0;
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 23px;
+    width: 100%;
+  }
+
+  .aboutMe__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .aboutMe__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 364px;
+  }
+
+  .aboutMe__name {
+    font-size: 40px;
+    max-width: 348px;
+    margin: 0 0 16px 0;
+    max-width: 364px;
+  }
+
+  .aboutMe__profession {
+    max-width: 348px;
+    font-size: 12px;
+    margin: 0 0 20px 0;
+    max-width: 364px;
+  }
+
+  .abourMe__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 364px;
+    margin: 0 0 69px 0;
+    max-width: 364px;
+  }
+
+  .aboutMe__photo {
+    width: 255px;
+    height: 307px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width : 767px) {
+  .aboutMe {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    padding: 70px 14px 70px 14px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, max-content);
+  }
+
+  .aboutMe__title {
+    font-size: 18px;
+    margin: 0 0 60px 0;
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 28px;
+    width: 100%;
+  }
+
+  .aboutMe__container {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+    "photo"
+    "info";
+  }
+
+  .aboutMe__info {
+    grid-area: info;
+    max-width: 292px;
+  }
+
+  .aboutMe__name {
+    grid-area: info;
+    font-size: 30px;
+    max-width: 292px;
+    margin: 0 0 20px 0;
+  }
+
+  .aboutMe__profession {
+    grid-area: info;
+    font-size: 11px;
+    max-width: 292px;
+    margin: 0 0 20px 0;
+  }
+
+  .abourMe__text {
+    grid-area: info;
+    font-size: 11px;
+    line-height: 16px;
+    max-width: 292px;
+    margin: 0 0 40px 0;
+  }
+
+  .aboutMe__link {
+    grid-area: info;
+    margin: 0 26px 0 auto;
+  }
+
+  .aboutMe__photo {
+    grid-area: photo;
+    width: 292px;
+    height: 352px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+}
