@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/movies-explorer-frontend/static/css/main.1e0cefbc.chunk.css",
+    "main.js": "/movies-explorer-frontend/static/js/main.e799f9b3.chunk.js",
+    "main.js.map": "/movies-explorer-frontend/static/js/main.e799f9b3.chunk.js.map",
+    "runtime-main.js": "/movies-explorer-frontend/static/js/runtime-main.4a84589f.js",
+    "runtime-main.js.map": "/movies-explorer-frontend/static/js/runtime-main.4a84589f.js.map",
+    "static/js/2.2732932a.chunk.js": "/movies-explorer-frontend/static/js/2.2732932a.chunk.js",
+    "static/js/2.2732932a.chunk.js.map": "/movies-explorer-frontend/static/js/2.2732932a.chunk.js.map",
+    "static/js/3.b39e99a6.chunk.js": "/movies-explorer-frontend/static/js/3.b39e99a6.chunk.js",
+    "static/js/3.b39e99a6.chunk.js.map": "/movies-explorer-frontend/static/js/3.b39e99a6.chunk.js.map",
+    "index.html": "/movies-explorer-frontend/index.html",
+    "static/css/main.1e0cefbc.chunk.css.map": "/movies-explorer-frontend/static/css/main.1e0cefbc.chunk.css.map",
+    "static/js/2.2732932a.chunk.js.LICENSE.txt": "/movies-explorer-frontend/static/js/2.2732932a.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/movies-explorer-frontend/static/media/SourceSansPro-SemiBoldItalic.83abc281.woff",
+    "static/media/SavedMoviesCard.css": "/movies-explorer-frontend/static/media/remove-icon.e5ea3c6e.svg",
+    "static/media/arrow.54da24f4.svg": "/movies-explorer-frontend/static/media/arrow.54da24f4.svg",
+    "static/media/FilterCheckbox.css": "/movies-explorer-frontend/static/media/checkbox-disabled.f33d3dcc.svg",
+    "static/media/SearchForm.css": "/movies-explorer-frontend/static/media/find-icon.bd3349a0.svg",
+    "static/media/landing-logo.3446dc06.svg": "/movies-explorer-frontend/static/media/landing-logo.3446dc06.svg",
+    "static/media/logo.5e99a335.svg": "/movies-explorer-frontend/static/media/logo.5e99a335.svg",
+    "static/media/GamburgerMenu.css": "/movies-explorer-frontend/static/media/profile.dc78329e.svg",
+    "static/media/search-icon.c7cf1b72.svg": "/movies-explorer-frontend/static/media/search-icon.c7cf1b72.svg",
+    "static/media/vladimir.olegovich.4aaea2ff.JPG": "/movies-explorer-frontend/static/media/vladimir.olegovich.4aaea2ff.JPG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a84589f.js",
+    "static/js/2.2732932a.chunk.js",
+    "static/css/main.1e0cefbc.chunk.css",
+    "static/js/main.e799f9b3.chunk.js"
+  ]
+}
