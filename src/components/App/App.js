@@ -111,7 +111,7 @@ function App() {
     //if (localStorage.getItem('allMovies')) setCards(JSON.parse(localStorage.getItem('allMovies')));
     if (localStorage.getItem('savedMovies'))  setVisibleSavedMovies(JSON.parse(localStorage.getItem('savedMovies')));
     tokenCheck();
-    }, []);
+  }, []);
 
   const getSavedFilms = () => {
     setVisibleSavedMovies(findFilms((localStorage.getItem('savedMovies') ? JSON.parse(localStorage.getItem('savedMovies')) : []), filmInputSearch));

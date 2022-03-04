@@ -1,44 +1,64 @@
-# Фронтенд приложения Movies-Explorer.
--------------------------  -------------------------  -------------------------
-Сервис, в котором можно регистрироваться, авторизовываться, редактировать информацию о себе, выполнять поиск по фильмам и сохранять понравившиеся Вам фильмы.
+# __Yandex.Practicum. Web Development training course. Graduate work. Movies-Explorer application Frontend.__
 
-[Ссылка на сайт](http://movexp.students.nomoredomains.icu/).
-
-### Публичный IPv4: 84.252.130.214.
-
-# Getting Started with Create React App
+<!-- ## __[View the site](http://movexp.students.nomoredomains.icu/).__ -->
+<!-- ## __Публичный IPv4: 84.252.130.214.__ -->
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-In the project directory, you can run:
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### `npm start`
+## __[Application Backend here](https://github.com/At0m234/movies-explorer-backend)__
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## __[GitHub Pages](https://at0m234.github.io/movies-explorer-frontend/)__
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## __Functionality__
 
-### `npm test`
+"Movies-Explorer" - adaptive multi-page web application based on a layout from Figma.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application is created using React, HTML, CSS, JavaScript, API.
 
-### `npm run build`
+The application is optimized for screen resolutions from 320px to infinity. The Desktop First approach was used in the layout.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application allows user to:
+ - register (hash password);
+ - login;
+ - edit information about yourself;
+ - search for movies;
+ - save the movies you like.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## __Available Scripts__
+  ### __`npm run install`__
+  Installing all dependencies from package.json;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ### __`npm run start`__
+  Runs the app in the development mode.\
+  Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm run eject`
+  The page will reload if you make edits.\
+  You will also see any lint errors in the console.
 
+  ### __`npm run build`__
+  Builds the app for production to the `build` folder.\
+  It correctly bundles React in production mode and optimizes the build for the best performance.
+
+  The build is minified and the filenames include the hashes.\
+  Your app is ready to be deployed!
+
+  See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+  ### __`npm run deploy`__
+  Deploy the "build" folder on domain.
+
+  ### __`npm run deploygh`__
+  Deploy the "build" folder to the gh-pages branch of the remote repository.
+
+  ### __`npm run test`__
+  Launches the test runner in the interactive watch mode.\
+  See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+  ### __`npm run eject`__
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
@@ -47,32 +67,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## __Stack:__
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### `React`
+### `HTML`
+### `CSS`
+### `JavaScript`
+### `API`
