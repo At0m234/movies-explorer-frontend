@@ -1,5 +1,5 @@
-export const BASE_URL = 'https://api.movexp.students.nomoredomains.icu';
-// export const BASE_URL = 'http://localhost:3001';
+// export const BASE_URL = 'https://api.movexp.students.nomoredomains.icu';
+export const BASE_URL = 'http://localhost:4000';
 
 // signup — регистрация пользователя
 export const register = (name, email, password) => {

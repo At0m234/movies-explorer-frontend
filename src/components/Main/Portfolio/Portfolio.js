@@ -8,9 +8,9 @@ function Portfolio() {
     <section className='portfolio'>
       <h2 className='portfolio__title'>Портфолио</h2>
       <div className='portfolio__links'>
-        <a href='https://github.com/At0m234/movies-explorer-frontend' className='portfolio__link' target='/blank'>Статичный сайт<img src={arrowImg} alt='Стрелка'></img></a>
-        <a href='https://github.com/At0m234/movies-explorer-frontend' className='portfolio__link' target='/blank'>Адаптивный сайт<img src={arrowImg} alt='Стрелка'></img></a>
-        <a href='https://github.com/At0m234/movies-explorer-frontend' className='portfolio__link' target='/blank'>Одностраничное приложение<img src={arrowImg} alt='Стрелка'></img></a>
+        <a href='https://github.com/At0m234/how-to-learn-second' className='portfolio__link' target='/blank'>Статичный сайт<img src={arrowImg} alt='Стрелка'></img></a>
+        <a href='https://github.com/At0m234/russian-travel' className='portfolio__link' target='/blank'>Адаптивный сайт<img src={arrowImg} alt='Стрелка'></img></a>
+        <a href='https://github.com/At0m234/react-mesto-app' className='portfolio__link' target='/blank'>Одностраничное приложение<img src={arrowImg} alt='Стрелка'></img></a>
       </div>
     </section>
   )

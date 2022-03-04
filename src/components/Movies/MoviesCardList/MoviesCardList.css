@@ -12,6 +12,7 @@
   background-color: #202020;
   margin: 0 auto;
   max-width: 2560px;
+  min-height: 45vh;
   height: fit-content;
   padding: 0 70px 140px 70px;
 }
